@@ -1,22 +1,21 @@
 #include <iostream>
-#include <string>
-#include <istream>
-
+#include <cmath>
 
 int main() 
 {
-   std::string name;
-   int age;
+   double a;
+   double b;
+   double c;
 
-   std::cout << "What's your full name?: ";
-   std::getline(std::cin >> std::ws, name);
+   std::cout << "Enter side A: ";
+   std::cin >> a;
 
-   std::cout << "What's your age?: ";
-   std::cin >> age;
+   std::cout << "Enter size B: ";
+   std::cin >> b;
 
-   std::cout << "Hello " << name << '\n';
-   std::cout << "You are " << age << " years old";
+   c = sqrt(pow(a, 2) + pow(b, 2));
+
+   std::cout << "side C: " << c;
 
    return 0;
 }
-
