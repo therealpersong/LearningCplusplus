@@ -3,20 +3,46 @@
 int main()
 {
 
-   int age;
+   char op;
+   double num1;
+   double num2;
+   double result;
 
+   std::cout << "*>*>*>*>*>Calculator*<*<*<*<*<'\n";
 
-   std::cout << "Welcome to the site, Enter your age: ";
-   std::cin >> age;
+   std::cout << "Enter either (+, -, *, /): ";
+   std::cin >> op;
 
-   if(age >= 22)
-   {
-      std::cout << "Access Granted" << '\n';
+   std::cout << "Enter #1: ";
+   std::cin >> num1;
+
+   std::cout << "Enter #2: ";
+   std::cin >> num2;
+   
+   switch(op){
+   case '+':
+      result = num1 + num2;
+      std::cout << "result is " << result << '\n';
+      break;
+   case '-':
+      result = num1 - num2;
+      std::cout << "result is " << result << '\n';
+      break;   
+   case '*':
+      result = num1 * num2;
+      std::cout << "result is " << result << '\n';
+      break;
+   case '/':
+      result = num1 / num2;
+      std::cout << "result is " << result << '\n';
+      break;
+   default:
+   std::cout << "Invalid operator\n";
+   break;
    }
 
-   else if(age < 22)
-   {
-      std::cout << "You are not allowed to access this site" << '\n';
-   }
+
+      std::cout << "*>*>*>*>*>*>------------------------<*<*<*<*<'\n";
+
    return 0;
 }
