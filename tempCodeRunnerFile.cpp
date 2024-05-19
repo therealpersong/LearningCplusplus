@@ -1,7 +1,13 @@
 #include <iostream>
 
+using std::string string;
+
 int main()
 {
-    std::cout << "Hello world";
+
+    string name;
+
+    std::cout << "What is your name?" << '\n';
+    std::getline(std::cin, name);
     return 0;
 }
