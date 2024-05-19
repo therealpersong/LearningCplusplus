@@ -1,13 +1,17 @@
 #include <iostream>
 
-using std::string string;
-
 int main()
 {
 
-    string name;
+   int age;
 
-    std::cout << "What is your name?" << '\n';
-    std::getline(std::cin, name);
-    return 0;
+
+   std::cout << "Welcome to the site, Enter your age:";
+   std::cin >> age;
+
+   if(age >= 18)
+   {
+      std::cout << "Access Granted" << '\n';
+   }
+   return 0;
 }
