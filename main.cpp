@@ -1,34 +1,30 @@
 #include <iostream>
-#include <cmath>
-
-using std::cout;
-using std::cin;
-
-namespace first{
-    double Side_A = 53;
-    double Side_B = 62;
-}
-
-namespace second{
-    double Side_A = 83;
-    double Side_B = 21;
-}
 
 int main()
 {
 
-    double Side_A;
-    double Side_B;
-    double result;
+    int age;
 
-    //cout << "Enter side A: ";
-    //cin >> Side_A;
-
-    //cout << "Enter side B: ";
-    //cin >> Side_B;
-
-    result = sqrt(pow (first::Side_A, 2) + pow(first::Side_B, 2));
-    cout << "The hypotenuse is: " << result;
-
+    std::cout << "Enter your age: ";
+    std::cin >> age;
+ //----------------------------------------------- //-----------------------------------------------//
+    if(age >= 18){
+        std::cout << "Welcome to the site";
+    }
+     //-----------------------------------------------
+    else if (age >= 0)
+    {
+        std::cout << "You haven't even been born yet or you are months old liar liar,";
+    }
+    //-----------------------------------------------
+    else if (age >= 100){
+        std::cout << "You are a vampire, you are not allowed to enter";
+    }
+     //-----------------------------------------------
+    else{
+        std::cout << "You are not old enough to enter!";
+    }
+     //-----------------------------------------------
     return 0;
+ //----------------------------------------------- //-----------------------------------------------//
 }
