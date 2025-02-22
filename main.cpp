@@ -1,27 +1,47 @@
 #include <iostream>
-#include <cmath>
+#include <cctype> // Include for toupper
 
-int main(){
+int main() {
+    char grade;
 
-    int age;
+    while (true) { // Infinite loop until a valid grade is entered
+        std::cout << "What letter grade? (A-F): ";
+        std::cin >> grade;
 
-    std::cout << "ENTER YOUR AGE: ";
-    std::cin >> age;
+        // Check if input is a single character and convert to uppercase
+        if (std::isalpha(grade)) {
+            grade = std::toupper(grade);
 
-    if(age >= 100){
-        std::cout << "You are too old to enter this site";
+            // If the grade is a valid letter grade, break out of the loop
+            if (grade >= 'A' && grade <= 'F') {
+                break; // Valid grade entered
+            }
+        }
+
+        // If we reach here, the input was invalid
+        std::cout << "Invalid input. Please enter a letter grade (A-F).\n";
     }
 
-    else if(age >= 18){
-        std::cout << "Welcome to da site!";
-    }
-
-    else if(age < 0){
-        std::cout << "You haven't even been born yet";
-    }
-
-    else{
-        std::cout << "You are not old enough to enter";
+    switch (grade) {
+    case 'A':
+        std::cout << "You did great";
+        break;
+    case 'B':
+        std::cout << "You did good";
+        break;
+    case 'C':
+        std::cout << "You did alright";
+        break;
+    case 'D':
+        std::cout << "You did bad unfortunately";
+        break;
+    case 'F':
+        std::cout << "You failed";
+        break;
+    default:
+        // This point should never be reached due to previous validation
+        std::cout << "Unexpected error.";
+        break;
     }
 
     return 0;
