@@ -1,16 +1,24 @@
 #include <iostream>
-#include <vector>
-
-// typedef std::vector<std::pair<std::string, int>> pairlist_t;
-//typedef std::string text_t;
-
-using text_t = std::string;
-
 int main(){
-    
-    // pairlist_t pairlist;
-    text_t firstName = "Tim";
-    std::cout << firstName << "\n";
+
+int students = 40;
+
+students +=1;
+students ++;
+students -=1;
+
+students -=2;
+students --;
+
+students = students * 2;
+students *=2;
+
+students /=20;
+
+int remainder = students % 3;
+
+std::cout << remainder << "\n";
+std::cout << students;
+
+return 0;
 }
-
-
