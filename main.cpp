@@ -3,18 +3,26 @@
 
 int main(){
 
-    double a;
-    double b;
-    double c;
+    int age;
 
-    std::cout << "Enter a side A: ";
-    std::cin >> a;
+    std::cout << "ENTER YOUR AGE: ";
+    std::cin >> age;
 
-    std::cout << "Enter side B: ";
-    std::cin >> b;
+    if(age >= 100){
+        std::cout << "You are too old to enter this site";
+    }
 
-    c = sqrt(pow(a,2) + pow(b, 2));
+    else if(age >= 18){
+        std::cout << "Welcome to da site!";
+    }
 
-    std::cout << "Side C: " << c;
+    else if(age < 0){
+        std::cout << "You haven't even been born yet";
+    }
+
+    else{
+        std::cout << "You are not old enough to enter";
+    }
+
     return 0;
 }
