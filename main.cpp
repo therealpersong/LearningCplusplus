@@ -1,24 +1,11 @@
 #include <iostream>
+
 int main(){
 
-int students = 40;
+int correct = 8;
+int questions = 10;
+double score = correct/(double)questions * 100;
 
-students +=1;
-students ++;
-students -=1;
+std::cout << score << "%";
 
-students -=2;
-students --;
-
-students = students * 2;
-students *=2;
-
-students /=20;
-
-int remainder = students % 3;
-
-std::cout << remainder << "\n";
-std::cout << students;
-
-return 0;
 }
