@@ -1,17 +1,16 @@
 #include <iostream>
+#include <vector>
+
+// typedef std::vector<std::pair<std::string, int>> pairlist_t;
+//typedef std::string text_t;
+
+using text_t = std::string;
 
 int main(){
-
-    int x = 4;
-    int y = 7;
-    int sum = x + y;
-
-    std::cout << x << '\n';
-    std::cout << y << '\n';
-    std::cout << sum << '\n';
-
-    std::string name = "Tim";
-    std::cout << "Hello " << name << '\n';
-
-    return 0;
+    
+    // pairlist_t pairlist;
+    text_t firstName = "Tim";
+    std::cout << firstName << "\n";
 }
+
+
