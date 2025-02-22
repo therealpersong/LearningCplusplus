@@ -1,11 +1,21 @@
 #include <iostream>
 
-int main(){
+// cout << (insertion operator)
+// cin >> (extraction operator)
 
-int correct = 8;
-int questions = 10;
-double score = correct/(double)questions * 100;
+int main() 
+{
+   std::string name;
+   int age;
 
-std::cout << score << "%";
+   std::cout << "What's your full name?: ";
+   std::getline(std::cin >> std::ws, name);
 
+   std::cout << "What's your age?: ";
+   std::cin >> age;
+
+   std::cout << "Hello " << name << '\n';
+   std::cout << "You are " << age << " years old";
+
+   return 0;
 }
